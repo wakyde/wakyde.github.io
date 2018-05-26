@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-25T06:25:18.468Z</updated>
+  <updated>2018-05-26T02:02:25.592Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/05/26/2018-2-25-%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/"/>
     <id>http://yoursite.com/2018/05/26/2018-2-25-实验报告/</id>
     <published>2018-05-26T01:52:58.723Z</published>
-    <updated>2018-05-25T06:25:18.468Z</updated>
+    <updated>2018-05-26T02:02:25.592Z</updated>
     
     <content type="html"><![CDATA[<h1 id="实验报告"><a href="#实验报告" class="headerlink" title="实验报告"></a><center>实验报告</center></h1><center>编辑者:凌汪洪</center><p><strong>实验名称</strong><br>对某门课程统计某个分数段的人数</p><p><strong>运行环境</strong><br>win10 X64</p><p><strong>编译环境</strong><br>python3.6</p><p><strong>编译软件</strong><br>pycharm-5.0</p><p><strong>依赖文件</strong><br><img src="./grade.xlsx" alt="Alt text"></p><p><strong>代码实现</strong></p><pre><code>#! /usr/bin/env python   #coding=utf-8 import xlrd # excel数据包 Perfect = 0 # 优秀的人数 Good = 0    # 良好的人数 Medium = 0  # 中等的人数 Pass = 0    # 及格的人数 Bad = 0     # 不及格的人数 n = 0 classNo ={&quot;大学英语2&quot;:2,&quot;离散数学&quot;:3,&quot;高级语言程序设计&quot;:4,&quot;面向对象程序设计&quot;:5,&quot;数字逻辑&quot;:6,&quot;数据结构&quot;:7} # 课程编号 xls = xlrd.open_workbook(&apos;F:\\Python\\Homework\\grade.xlsx&apos;) # 打开成绩单 sheet = xls.sheets()[0] # 确定成绩表 print(&quot;请输入课程名:(大学英语2,离散数学,高级语言程序设计,面向对象程序设计,数字逻辑,数据结构)&quot;) className = input()  #输入课程名 Number = classNo[className] class_grade = sheet.col_values(Number) for grade in range(1,34):     n = n + 1     grade = class_grade[n]     if grade &gt;=90:         Perfect = Perfect + 1     elif grade &gt;= 80 and grade &lt; 90:         Good = Good + 1     elif grade &gt;= 70 and grade &lt; 80:         Medium = Medium +1     elif grade &gt;= 60 and grade &lt; 70:         Pass = Pass + 1     elif grade &lt; 60:         Bad = Bad + 1 print(&quot;优秀人数:%d&quot; % Perfect) print(&quot;良好人数:%d&quot; % Good) print(&quot;中等人数:%d&quot; % Medium) print(&quot;及格人数:%d&quot; % Pass) print(&quot;不及格人数:%d&quot; % Bad)</code></pre><p><strong>运行结果</strong><br><img src="./run_result.png" alt="Alt text"></p>]]></content>
     
@@ -33,6 +33,8 @@
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
