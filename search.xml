@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[实验报告]]></title>
+    <url>%2F2018%2F05%2F26%2F2018-2-25-%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A%2F</url>
+    <content type="text"><![CDATA[实验报告编辑者:凌汪洪 实验名称对某门课程统计某个分数段的人数 运行环境win10 X64 编译环境python3.6 编译软件pycharm-5.0 依赖文件 代码实现 #! /usr/bin/env python #coding=utf-8 import xlrd # excel数据包 Perfect = 0 # 优秀的人数 Good = 0 # 良好的人数 Medium = 0 # 中等的人数 Pass = 0 # 及格的人数 Bad = 0 # 不及格的人数 n = 0 classNo ={&quot;大学英语2&quot;:2,&quot;离散数学&quot;:3,&quot;高级语言程序设计&quot;:4,&quot;面向对象程序设计&quot;:5,&quot;数字逻辑&quot;:6,&quot;数据结构&quot;:7} # 课程编号 xls = xlrd.open_workbook(&apos;F:\\Python\\Homework\\grade.xlsx&apos;) # 打开成绩单 sheet = xls.sheets()[0] # 确定成绩表 print(&quot;请输入课程名:(大学英语2,离散数学,高级语言程序设计,面向对象程序设计,数字逻辑,数据结构)&quot;) className = input() #输入课程名 Number = classNo[className] class_grade = sheet.col_values(Number) for grade in range(1,34): n = n + 1 grade = class_grade[n] if grade &gt;=90: Perfect = Perfect + 1 elif grade &gt;= 80 and grade &lt; 90: Good = Good + 1 elif grade &gt;= 70 and grade &lt; 80: Medium = Medium +1 elif grade &gt;= 60 and grade &lt; 70: Pass = Pass + 1 elif grade &lt; 60: Bad = Bad + 1 print(&quot;优秀人数:%d&quot; % Perfect) print(&quot;良好人数:%d&quot; % Good) print(&quot;中等人数:%d&quot; % Medium) print(&quot;及格人数:%d&quot; % Pass) print(&quot;不及格人数:%d&quot; % Bad) 运行结果]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[title]]></title>
     <url>%2F2018%2F05%2F25%2Ftitle%2F</url>
     <content type="text"></content>
